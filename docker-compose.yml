@@ -1,0 +1,11 @@
+version: "2"
+services:
+
+  testapp:
+    build: ./
+    image: testapp
+    volumes:
+      - ./src:/usr/src/app/src
+    ports:
+      - "8080:8080"
+    command: npm start

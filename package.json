@@ -1,0 +1,14 @@
+{
+  "name": "docker-frontend-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --config testapp.config.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack-dev-server": "^1.16.2"
+  }
+}
