@@ -1,5 +1,7 @@
 This is an example of how to setup Docker for frontend development, using an tool which watches code and rebuilds on changes.
 
+See http://slides.com/trodrigues/docker-frontend-development first.
+
 Things to take into account:
 
 - webpack is being used as the build tool
