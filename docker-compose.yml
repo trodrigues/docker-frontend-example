@@ -4,8 +4,9 @@ services:
   testapp:
     build: ./
     image: testapp
+    tty: true
     volumes:
-      - ./src:/usr/src/app/src
+      - ./src:/app/src
     ports:
-      - "8080:8080"
-    command: npm start
+      - "3090:3090"
+    entrypoint: npm start

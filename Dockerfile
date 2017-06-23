@@ -1,8 +1,12 @@
-FROM node:6
+FROM node:8-alpine
 
-RUN mkdir /usr/src/app
-COPY . /usr/src/app
-WORKDIR /usr/src/app
-RUN npm install
+# switcheroo to make docker properly layer node_modules 
+COPY package.json /tmp/package.json
+RUN cd /tmp && npm install .
+RUN mkdir -p /app
+RUN mv /tmp/node_modules /app
 
-CMD ["npm start"]
+COPY . /app
+WORKDIR /app
+
+ENTRYPOINT ["npm", "run", "build"]
